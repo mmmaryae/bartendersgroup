@@ -18,7 +18,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink1.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/caipirinha1.jpg" alt="">
                     <h2>Caipiroska</h2>
                 </div>
 
@@ -43,7 +43,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink2.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/caipirinha2.jpg" alt="">
                     <h2>Margarita</h2>
                 </div>
 
@@ -68,7 +68,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink3.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/mojito.jpg" alt="">
                     <h2>Mojito</h2>
                 </div>
 
@@ -93,7 +93,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink4.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/cosmopolitan.jpg" alt="">
                     <h2>Cosmopolitan</h2>
                 </div>
 
@@ -118,7 +118,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink5.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/pina-colada.jpg" alt="">
                     <h2>Piña Colada</h2>
                 </div>
 
@@ -143,7 +143,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="img/drink6.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/negroni.jpg" alt="">
                     <h2>Negroni</h2>
                 </div>
 
