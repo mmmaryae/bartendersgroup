@@ -66,7 +66,7 @@ if (isset($_GET['sair'])){
                     <li><a class="dropdown-item" href="personality.php">Personality</a></li>
                     <?php } ?>
                     <li><a class="dropdown-item" href="#nossahisparte">Quem somos nós</a></li>
-                    <li><a class="dropdown-item" href="#contato-container">Fale conosco</a></li>
+                    <li><a class="dropdown-item" href="#contato2">Fale conosco</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -99,7 +99,7 @@ if (isset($_GET['sair'])){
 
         <?php } ?>
         <figure>
-            <a href="pg-contato.php">
+            <a href="#contato2">
                 <img src="imagens_html/secretario.png" alt="Fale Conosco">
             </a>
             <figcaption>Fale Conosco</figcaption>

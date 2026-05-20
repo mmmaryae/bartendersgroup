@@ -4,116 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio de Drinks</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2 class="menuh2">Principais Coquetéis</h2>
-    <div class="drinks-foto">
-        <!-- Drink 1 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/caipirinha levissima (1).jpg" alt="Caipiroska Slm">
-                <div class="drink-back">
-                    <h4>Caipiroska Slm</h4>
-                    <p>Ingredientes:</p>
-                    <ul>
-                        <li>1 dose de vodka</li>
-                        <li>1 limão</li>
-                        <li>Açúcar</li>
-                        <li>Gelo</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- Drink 2 -->
+    <h1 class="titulo">Principais Coquetéis</h1>
+
+    <section class="drinks-foto">
+
+        <!-- DRINK 1 -->
         <div class="drink-item">
             <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/caipirinha levissima (2).jpg" alt="Caipirinha Gourmet">
+
+                <div class="front">
+                    <img src="img/drink1.jpg" alt="Drink">
+                    <h2>Caipiroska</h2>
+                </div>
+
                 <div class="drink-back">
-                    <h4>Caipirinha Gourmet</h4>
+                    <h2>Caipiroska</h2>
+
                     <p>Ingredientes:</p>
+
                     <ul>
-                        <li>1 dose de cachaça</li>
+                        <li>Vodka</li>
                         <li>Limão</li>
                         <li>Açúcar</li>
                         <li>Gelo</li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
-        <!-- Drink 3 -->
+        <!-- DRINK 2 -->
         <div class="drink-item">
             <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/margarita.jpg" alt="Margarita">
+
+                <div class="front">
+                    <img src="img/drink2.jpg" alt="Drink">
+                    <h2>Margarita</h2>
+                </div>
+
                 <div class="drink-back">
-                    <h4>Margarita</h4>
+                    <h2>Margarita</h2>
+
                     <p>Ingredientes:</p>
+
                     <ul>
-                        <li>1 dose de tequila</li>
-                        <li>1 dose de Cointreau</li>
-                        <li>Suco de 1 limão</li>
+                        <li>Tequila</li>
+                        <li>Cointreau</li>
+                        <li>Limão</li>
                         <li>Gelo</li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
-        <!-- Drink 4 -->
+        <!-- DRINK 3 -->
         <div class="drink-item">
             <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/cosmopolitan.jpg" alt="Cosmopolitan">
-                <div class="drink-back">
-                    <h4>Cosmopolitan</h4>
-                    <p>Ingredientes:</p>
-                    <ul>
-                        <li>1 dose de vodka</li>
-                        <li>1 dose de Cointreau</li>
-                        <li>Suco de cranberry</li>
-                        <li>Suco de limão</li>
-                    </ul>
+
+                <div class="front">
+                    <img src="img/drink3.jpg" alt="Drink">
+                    <h2>Mojito</h2>
                 </div>
-            </div>
-        </div>
 
-        <!-- Drink 5 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/mojito.jpg" alt="Mojito">
                 <div class="drink-back">
-                    <h4>Mojito</h4>
+                    <h2>Mojito</h2>
+
                     <p>Ingredientes:</p>
+
                     <ul>
-                        <li>1 dose de rum branco</li>
-                        <li>Suco de 1 limão</li>
-                        <li>Folhas de hortelã</li>
-                        <li>Açúcar</li>
+                        <li>Rum</li>
+                        <li>Hortelã</li>
+                        <li>Limão</li>
                         <li>Água com gás</li>
-                        <li>Gelo</li>
                     </ul>
                 </div>
+
             </div>
         </div>
 
-        <!-- Drink 6 -->
+        <!-- DRINK 4 -->
         <div class="drink-item">
             <div class="drink-card" onclick="flipCard(this)">
-                <img class="cocktail-img" src="nos-e-drinks_html/piña colada.jpg" alt="Piña Colada">
+
+                <div class="front">
+                    <img src="img/drink4.jpg" alt="Drink">
+                    <h2>Cosmopolitan</h2>
+                </div>
+
                 <div class="drink-back">
-                    <h4>Piña Colada</h4>
+                    <h2>Cosmopolitan</h2>
+
                     <p>Ingredientes:</p>
+
                     <ul>
-                        <li>1 dose de rum</li>
-                        <li>Suco de abacaxi</li>
-                        <li>Coco ralado</li>
+                        <li>Vodka</li>
+                        <li>Cranberry</li>
+                        <li>Cointreau</li>
+                        <li>Limão</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- DRINK 5 -->
+        <div class="drink-item">
+            <div class="drink-card" onclick="flipCard(this)">
+
+                <div class="front">
+                    <img src="img/drink5.jpg" alt="Drink">
+                    <h2>Piña Colada</h2>
+                </div>
+
+                <div class="drink-back">
+                    <h2>Piña Colada</h2>
+
+                    <p>Ingredientes:</p>
+
+                    <ul>
+                        <li>Rum</li>
+                        <li>Leite de coco</li>
+                        <li>Abacaxi</li>
                         <li>Gelo</li>
                     </ul>
                 </div>
+
             </div>
         </div>
-    </div>
 
-    <script src="js/script.js"></script>
+        <!-- DRINK 6 -->
+        <div class="drink-item">
+            <div class="drink-card" onclick="flipCard(this)">
+
+                <div class="front">
+                    <img src="img/drink6.jpg" alt="Drink">
+                    <h2>Negroni</h2>
+                </div>
+
+                <div class="drink-back">
+                    <h2>Negroni</h2>
+
+                    <p>Ingredientes:</p>
+
+                    <ul>
+                        <li>Gin</li>
+                        <li>Campari</li>
+                        <li>Vermouth</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
