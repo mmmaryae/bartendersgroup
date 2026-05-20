@@ -3,16 +3,26 @@ require "includes/funcoes-controle.php";
 require "includes/funcoes.php";
 
 if (isset($_POST['criar'])) {
-    $email = $_POST['email'];
-    $nome  = $_POST['nome'];
+    $email = mysqli_real_escape_string($conexao, $_POST['email']);
+    $nome  = mysqli_real_escape_string($conexao, $_POST['nome']);
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-    inserirUsuario($conexao, $nome, $email, $senha);
-    echo "<script>alert('Cadastro feito com sucesso!')</script>";
+    // Verifica se o e-mail já está cadastrado
+    $verificar = mysqli_query($conexao, "SELECT id FROM usuarios WHERE email = '$email'");
+    if (mysqli_num_rows($verificar) > 0) {
+        $erro_cadastro = "Este e-mail já está cadastrado.";
+    } else {
+        inserirUsuario($conexao, $nome, $email, $senha);
+        $usuario = buscarUsuario($conexao, $email);
+        login($usuario['id'], $usuario['nome']);
+        header("location:index.php");
+        die();
+    }
 }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +30,18 @@ if (isset($_POST['criar'])) {
     <link rel="stylesheet" href="css/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body { background: #000; font-family: 'Urbanist', sans-serif; color: #fff; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+            font-family: 'Urbanist', sans-serif;
+            color: #fff;
+        }
 
 
         /* Navbar */
@@ -32,6 +51,7 @@ if (isset($_POST['criar'])) {
             display: flex;
             justify-content: center;
         }
+
         .nav {
             list-style: none;
             display: flex;
@@ -39,7 +59,11 @@ if (isset($_POST['criar'])) {
             padding: 0;
             margin: 0;
         }
-        .nav-item { position: relative; }
+
+        .nav-item {
+            position: relative;
+        }
+
         .nav-link {
             display: block;
             padding: 14px 20px;
@@ -48,11 +72,13 @@ if (isset($_POST['criar'])) {
             text-align: center;
             font-family: "Urbanist", sans-serif;
         }
+
         .nav-link:hover {
-            background-color: rgba(87,87,87,0.12);
+            background-color: rgba(87, 87, 87, 0.12);
             border-radius: 10px;
             color: #f5f3f3;
         }
+
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -63,31 +89,52 @@ if (isset($_POST['criar'])) {
             padding: 0;
             margin: 0;
         }
+
         .dropdown-item {
             color: #fff;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-        .dropdown-item:hover { background-color: rgba(87,87,87,0.15); }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        .dropdown-item:hover {
+            background-color: rgba(87, 87, 87, 0.15);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
 
         .page-header {
             text-align: center;
             padding: 3rem 1rem 2rem;
         }
+
         .page-header h1 {
             font-size: 28px;
             font-weight: 500;
             color: #fff;
             margin-bottom: 8px;
         }
-        .breadcrumb-bar { font-size: 13px; color: #555; }
-        .breadcrumb-bar a { color: #c0392b; text-decoration: none; }
-        .breadcrumb-bar a:hover { text-decoration: underline; }
 
-        hr { border-color: #1a1a1a; }
+        .breadcrumb-bar {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .breadcrumb-bar a {
+            color: #c0392b;
+            text-decoration: none;
+        }
+
+        .breadcrumb-bar a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border-color: #1a1a1a;
+        }
 
         .auth-wrapper {
             max-width: 900px;
@@ -105,12 +152,14 @@ if (isset($_POST['criar'])) {
             border-radius: 12px;
             padding: 2rem 1.75rem;
         }
+
         .auth-card h2 {
             font-size: 20px;
             font-weight: 600;
             color: #c0392b;
             margin-bottom: 1.5rem;
         }
+
         .auth-card p {
             font-size: 13.5px;
             color: #888;
@@ -118,7 +167,30 @@ if (isset($_POST['criar'])) {
             margin-bottom: 1.5rem;
         }
 
-        .campo { margin-bottom: 1.1rem; }
+        .msg-erro {
+            background: #1f0a0a;
+            border: 1px solid #c0392b55;
+            border-radius: 7px;
+            color: #e87070;
+            font-size: 13px;
+            padding: 10px 14px;
+            margin-bottom: 1.2rem;
+        }
+
+        .msg-sucesso {
+            background: #0d1f0d;
+            border: 1px solid #2d6a2d;
+            border-radius: 7px;
+            color: #7ec97e;
+            font-size: 13px;
+            padding: 10px 14px;
+            margin-bottom: 1.2rem;
+        }
+
+        .campo {
+            margin-bottom: 1.1rem;
+        }
+
         .campo label {
             display: block;
             font-size: 11px;
@@ -128,6 +200,7 @@ if (isset($_POST['criar'])) {
             text-transform: uppercase;
             margin-bottom: 6px;
         }
+
         .campo input {
             width: 100%;
             padding: 10px 14px;
@@ -140,8 +213,14 @@ if (isset($_POST['criar'])) {
             outline: none;
             transition: border-color 0.2s;
         }
-        .campo input:focus { border-color: #c0392b; }
-        .campo input::placeholder { color: #444; }
+
+        .campo input:focus {
+            border-color: #c0392b;
+        }
+
+        .campo input::placeholder {
+            color: #444;
+        }
 
         .btn-primary {
             width: 100%;
@@ -158,7 +237,10 @@ if (isset($_POST['criar'])) {
             margin-top: 0.5rem;
             transition: background 0.2s;
         }
-        .btn-primary:hover { background: #a93226; }
+
+        .btn-primary:hover {
+            background: #a93226;
+        }
 
         .btn-outline {
             width: 100%;
@@ -178,7 +260,11 @@ if (isset($_POST['criar'])) {
             display: block;
             text-align: center;
         }
-        .btn-outline:hover { background: #c0392b; color: #fff; }
+
+        .btn-outline:hover {
+            background: #c0392b;
+            color: #fff;
+        }
 
         footer {
             background: #000;
@@ -189,16 +275,25 @@ if (isset($_POST['criar'])) {
             padding: 20px 1.5rem;
             border-top: 1px solid #1a1a1a;
         }
-        footer img { width: 120px; }
-        footer h6 { font-size: 11px; color: #666; }
+
+        footer img {
+            width: 120px;
+        }
+
+        footer h6 {
+            font-size: 11px;
+            color: #666;
+        }
 
         @media (max-width: 600px) {
-            .auth-wrapper { grid-template-columns: 1fr; }
+            .auth-wrapper {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-<body>
 
+<body>
 
     <div class="page-header">
         <h1>Minha conta</h1>
@@ -212,6 +307,13 @@ if (isset($_POST['criar'])) {
         <!-- Cadastro -->
         <div class="auth-card">
             <h2>Criando sua conta!</h2>
+            <?php if (!empty($erro_cadastro)) { ?>
+                <div class="msg-erro"><?= $erro_cadastro ?></div>
+            <?php } ?>
+            <?php if (!empty($sucesso_cadastro)) { ?>
+                <div class="msg-sucesso"><?= $sucesso_cadastro ?></div>
+            <?php } ?>
+
             <form action="" method="POST">
                 <div class="campo">
                     <label for="email">E-mail</label>
@@ -245,4 +347,5 @@ if (isset($_POST['criar'])) {
     </footer>
 
 </body>
+
 </html>
