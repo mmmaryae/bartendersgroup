@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio de Drinks</title>
-     <link rel="stylesheet" href="css/stylespersona.css">
+    <link rel="stylesheet" href="css/stylespersona.css">
 </head>
 <body>
+
+<a href="index.php" class="btn-voltar">&#8592; Voltar</a>
 
 <section class="drink-section">
 
@@ -33,7 +35,7 @@
                         <li>🍷 Vermute Tinto</li>
                         <li>🌿 Casca de Laranja</li>
                     </ul>
-                   
+                    <div class="price">R$ 38</div>
                 </div>
             </div>
         </div>
@@ -53,7 +55,7 @@
                         <li>🟡 Suco de Limão</li>
                         <li>🧂 Sal na Borda</li>
                     </ul>
-                
+                    <div class="price">R$ 35</div>
                 </div>
             </div>
         </div>
@@ -73,7 +75,7 @@
                         <li>🟡 Limão Tahiti</li>
                         <li>💧 Água com Gás</li>
                     </ul>
-            
+                    <div class="price">R$ 32</div>
                 </div>
             </div>
         </div>
@@ -94,7 +96,7 @@
                         <li>💊 Angostura Bitters</li>
                         <li>🍊 Casca de Laranja</li>
                     </ul>
-              
+                    <div class="price">R$ 42</div>
                 </div>
             </div>
         </div>
@@ -114,7 +116,7 @@
                         <li>💧 Água com Gás</li>
                         <li>🍊 Fatia de Laranja</li>
                     </ul>
-             
+                    <div class="price">R$ 34</div>
                 </div>
             </div>
         </div>
@@ -134,7 +136,7 @@
                         <li>🟡 Suco de Limão</li>
                         <li>🍬 Açúcar Simples</li>
                     </ul>
-             
+                    <div class="price">R$ 33</div>
                 </div>
             </div>
         </div>
@@ -154,7 +156,7 @@
                         <li>🍫 Licor Kahlúa</li>
                         <li>🍬 Açúcar Simples</li>
                     </ul>
-                 
+                    <div class="price">R$ 40</div>
                 </div>
             </div>
         </div>
@@ -175,7 +177,7 @@
                         <li>🍬 Xarope de Açúcar</li>
                         <li>🥚 Clara de Ovo</li>
                     </ul>
-               
+                    <div class="price">R$ 38</div>
                 </div>
             </div>
         </div>
@@ -195,7 +197,7 @@
                         <li>🍒 Suco de Cranberry</li>
                         <li>🟡 Limão Siciliano</li>
                     </ul>
-              
+                    <div class="price">R$ 36</div>
                 </div>
             </div>
         </div>
@@ -215,7 +217,7 @@
                         <li>🍬 Xarope Simples</li>
                         <li>💊 Angostura</li>
                     </ul>
-                 
+                    <div class="price">R$ 37</div>
                 </div>
             </div>
         </div>
@@ -235,7 +237,7 @@
                         <li>🟡 Suco de Limão</li>
                         <li>🌿 Hortelã</li>
                     </ul>
-               
+                    <div class="price">R$ 34</div>
                 </div>
             </div>
         </div>
@@ -256,7 +258,7 @@
                         <li>🫐 Frutas Vermelhas</li>
                         <li>🌸 Pétalas de Flor</li>
                     </ul>
-              
+                    <div class="price">R$ 36</div>
                 </div>
             </div>
         </div>
@@ -276,7 +278,7 @@
                         <li>🟡 Suco de Limão</li>
                         <li>🌿 Hortelã Fresca</li>
                     </ul>
-                
+                    <div class="price">R$ 33</div>
                 </div>
             </div>
         </div>
@@ -296,7 +298,7 @@
                         <li>🍬 Açúcar Demerara</li>
                         <li>🧊 Gelo Mineral</li>
                     </ul>
-                  
+                    <div class="price">R$ 28</div>
                 </div>
             </div>
         </div>
