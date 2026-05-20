@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/12/2024 às 18:10
+-- Tempo de geração: 20/05/2026 às 22:37
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,12 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES
 (1, 'Gustavo', 'gustavo@gmail.com', '$2y$10$8zLd/Eegz79ufzLQLa2abOQ6OFMKTqxX3Bf8MupvGE5ExHTfFoAxa'),
-(2, 'Maria', 'maria@gmail.com', '$2y$10$JXcJJ/3MNqpX/dsTitcVDOkb.IpEd6xeCCSz0.4PvwyKwJ/wKvPZO');
+(2, 'Maria', 'maria@gmail.com', '$2y$10$JXcJJ/3MNqpX/dsTitcVDOkb.IpEd6xeCCSz0.4PvwyKwJ/wKvPZO'),
+(3, 'maria', 'mariaeduardasousa804@gmail.com', '$2y$10$xtvEQufqQ3zufiCfUya9cOCOSSLR5azDG6zsZPjIr4bIysogkTSl.'),
+(4, 'maria', 'ana@gmail.com', '$2y$10$TphVs5Dd8C6jVVgCdGwDx.yYTqFYssGgw9gGPrt9zGp6N/RiYIsg.'),
+(6, 'João', 'ana134@gmail.com', '$2y$10$bsYvvGmry1AZH6rk/D4O8Op1PneedMR0B5q5m.oIa.I7aQ18ZQ6cW'),
+(7, 'carlos', 'ana55@gmail.com', '$2y$10$Xnfm7XXTqOlkeSAFmMYSOOE9Z29GaJOjQwjml0ONPVN4L..Ibxs6K'),
+(8, 'carlos almeida', 'carlos99@gmail.com', '$2y$10$81SCxx9SKf/pKLqW3EPQHeF9I7e9rSRFtoeOOnffN0x9YwWfIsphm');
 
 --
 -- Índices para tabelas despejadas
@@ -50,7 +55,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES
 -- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -60,7 +66,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
