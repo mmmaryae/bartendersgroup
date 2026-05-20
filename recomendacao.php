@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinks</title>
-
-    <link rel="stylesheet" href="css/stylespersona.css">
+    <title>Cardápio de Drinks</title>
+     <link rel="stylesheet" href="css/stylespersona.css">
 </head>
-
 <body>
 
 <section class="drink-section">
 
-    <h2 class="titulo">Cardápio de Drinks</h2>
+    <div class="header">
+        <p class="sub">Cardápio</p>
+        <h2 class="titulo">Mixologia <span>Criativa</span></h2>
+    </div>
 
     <div class="grid-drinks">
-
 
         <!-- 7 -->
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                   <img src="nos-e-drinks_html/14.jpg" alt="Drink">
+                    <span class="badge">Popular</span>
+                    <img src="nos-e-drinks_html/14.jpg" alt="Negroni Fumado">
+                    <div class="card-label"><span>Negroni Fumado</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 7</h3>
-                    <p>Ingredientes do drink 7</p>
+                    <h3>Negroni Fumado</h3>
+                    <ul>
+                        <li>🥃 Gin London Dry</li>
+                        <li>🍊 Campari</li>
+                        <li>🍷 Vermute Tinto</li>
+                        <li>🌿 Casca de Laranja</li>
+                    </ul>
+                   
                 </div>
             </div>
         </div>
@@ -35,11 +42,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                     <img src="nos-e-drinks_html/13.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/13.jpg" alt="Margarita Cítrica">
+                    <div class="card-label"><span>Margarita Cítrica</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 8</h3>
-                    <p>Ingredientes do drink 8</p>
+                    <h3>Margarita Cítrica</h3>
+                    <ul>
+                        <li>🍋 Tequila Blanco</li>
+                        <li>🍊 Cointreau</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🧂 Sal na Borda</li>
+                    </ul>
+                
                 </div>
             </div>
         </div>
@@ -48,11 +62,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="nos-e-drinks_html/12.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/12.jpg" alt="Mojito Tropical">
+                    <div class="card-label"><span>Mojito Tropical</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 9</h3>
-                    <p>Ingredientes do drink 9</p>
+                    <h3>Mojito Tropical</h3>
+                    <ul>
+                        <li>🥃 Rum Branco</li>
+                        <li>🌿 Hortelã Fresca</li>
+                        <li>🟡 Limão Tahiti</li>
+                        <li>💧 Água com Gás</li>
+                    </ul>
+            
                 </div>
             </div>
         </div>
@@ -61,11 +82,19 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="nos-e-drinks_html/11.jpg" alt="Drink">
+                    <span class="badge">Chef's</span>
+                    <img src="nos-e-drinks_html/11.jpg" alt="Old Fashioned">
+                    <div class="card-label"><span>Old Fashioned</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 10</h3>
-                    <p>Ingredientes do drink 10</p>
+                    <h3>Old Fashioned</h3>
+                    <ul>
+                        <li>🥃 Bourbon Americano</li>
+                        <li>🍬 Açúcar Demerara</li>
+                        <li>💊 Angostura Bitters</li>
+                        <li>🍊 Casca de Laranja</li>
+                    </ul>
+              
                 </div>
             </div>
         </div>
@@ -74,11 +103,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                   <img src="nos-e-drinks_html/10.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/10.jpg" alt="Aperol Spritz">
+                    <div class="card-label"><span>Aperol Spritz</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 11</h3>
-                    <p>Ingredientes do drink 11</p>
+                    <h3>Aperol Spritz</h3>
+                    <ul>
+                        <li>🍊 Aperol</li>
+                        <li>🍾 Prosecco</li>
+                        <li>💧 Água com Gás</li>
+                        <li>🍊 Fatia de Laranja</li>
+                    </ul>
+             
                 </div>
             </div>
         </div>
@@ -87,11 +123,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                     <img src="nos-e-drinks_html/9.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/9.jpg" alt="Daiquiri Rosa">
+                    <div class="card-label"><span>Daiquiri Rosa</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 12</h3>
-                    <p>Ingredientes do drink 12</p>
+                    <h3>Daiquiri Rosa</h3>
+                    <ul>
+                        <li>🥃 Rum Branco</li>
+                        <li>🍓 Purê de Morango</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🍬 Açúcar Simples</li>
+                    </ul>
+             
                 </div>
             </div>
         </div>
@@ -100,11 +143,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                   <img src="nos-e-drinks_html/8.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/8.jpg" alt="Espresso Martini">
+                    <div class="card-label"><span>Espresso Martini</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 13</h3>
-                    <p>Ingredientes do drink 13</p>
+                    <h3>Espresso Martini</h3>
+                    <ul>
+                        <li>🥃 Vodka Premium</li>
+                        <li>☕ Espresso Duplo</li>
+                        <li>🍫 Licor Kahlúa</li>
+                        <li>🍬 Açúcar Simples</li>
+                    </ul>
+                 
                 </div>
             </div>
         </div>
@@ -113,11 +163,19 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                     <img src="nos-e-drinks_html/7.jpg" alt="Drink">
+                    <span class="badge">New</span>
+                    <img src="nos-e-drinks_html/7.jpg" alt="Whisky Sour">
+                    <div class="card-label"><span>Whisky Sour</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 14</h3>
-                    <p>Ingredientes do drink 14</p>
+                    <h3>Whisky Sour</h3>
+                    <ul>
+                        <li>🥃 Bourbon</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🍬 Xarope de Açúcar</li>
+                        <li>🥚 Clara de Ovo</li>
+                    </ul>
+               
                 </div>
             </div>
         </div>
@@ -126,11 +184,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="nos-e-drinks_html/6.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/6.jpg" alt="Cosmopolitan">
+                    <div class="card-label"><span>Cosmopolitan</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 15</h3>
-                    <p>Ingredientes do drink 15</p>
+                    <h3>Cosmopolitan</h3>
+                    <ul>
+                        <li>🥃 Vodka Cítrica</li>
+                        <li>🍊 Cointreau</li>
+                        <li>🍒 Suco de Cranberry</li>
+                        <li>🟡 Limão Siciliano</li>
+                    </ul>
+              
                 </div>
             </div>
         </div>
@@ -139,11 +204,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                     <img src="nos-e-drinks_html/5.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/5.jpg" alt="Pisco Sour">
+                    <div class="card-label"><span>Pisco Sour</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 16</h3>
-                    <p>Ingredientes do drink 16</p>
+                    <h3>Pisco Sour</h3>
+                    <ul>
+                        <li>🥃 Pisco Peruano</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🍬 Xarope Simples</li>
+                        <li>💊 Angostura</li>
+                    </ul>
+                 
                 </div>
             </div>
         </div>
@@ -152,11 +224,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                   <img src="nos-e-drinks_html/4.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/4.jpg" alt="Dark N Stormy">
+                    <div class="card-label"><span>Dark 'N' Stormy</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 17</h3>
-                    <p>Ingredientes do drink 17</p>
+                    <h3>Dark 'N' Stormy</h3>
+                    <ul>
+                        <li>🥃 Rum Escuro</li>
+                        <li>🫚 Ginger Beer</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🌿 Hortelã</li>
+                    </ul>
+               
                 </div>
             </div>
         </div>
@@ -165,11 +244,19 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                   <img src="nos-e-drinks_html/3.jpg" alt="Drink">
+                    <span class="badge">Vegano</span>
+                    <img src="nos-e-drinks_html/3.jpg" alt="Gin Tônica Premium">
+                    <div class="card-label"><span>Gin Tônica Premium</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 18</h3>
-                    <p>Ingredientes do drink 18</p>
+                    <h3>Gin Tônica Premium</h3>
+                    <ul>
+                        <li>🌿 Gin Artesanal</li>
+                        <li>💧 Água Tônica</li>
+                        <li>🫐 Frutas Vermelhas</li>
+                        <li>🌸 Pétalas de Flor</li>
+                    </ul>
+              
                 </div>
             </div>
         </div>
@@ -178,11 +265,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                     <img src="nos-e-drinks_html/2.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/2.jpg" alt="Moscow Mule">
+                    <div class="card-label"><span>Moscow Mule</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 19</h3>
-                    <p>Ingredientes do drink 19</p>
+                    <h3>Moscow Mule</h3>
+                    <ul>
+                        <li>🥃 Vodka</li>
+                        <li>🫚 Ginger Beer</li>
+                        <li>🟡 Suco de Limão</li>
+                        <li>🌿 Hortelã Fresca</li>
+                    </ul>
+                
                 </div>
             </div>
         </div>
@@ -191,11 +285,18 @@
         <div class="card">
             <div class="card-inner">
                 <div class="card-front">
-                    <img src="nos-e-drinks_html/1.jpg" alt="Drink">
+                    <img src="nos-e-drinks_html/1.jpg" alt="Caipirinha da Casa">
+                    <div class="card-label"><span>Caipirinha da Casa</span></div>
                 </div>
                 <div class="card-back">
-                    <h3>Drink 20</h3>
-                    <p>Ingredientes do drink 20</p>
+                    <h3>Caipirinha da Casa</h3>
+                    <ul>
+                        <li>🥃 Cachaça Reserva</li>
+                        <li>🟡 Limão Tahiti</li>
+                        <li>🍬 Açúcar Demerara</li>
+                        <li>🧊 Gelo Mineral</li>
+                    </ul>
+                  
                 </div>
             </div>
         </div>
