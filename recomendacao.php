@@ -68,7 +68,7 @@
             <div class="drink-card" onclick="flipCard(this)">
 
                 <div class="front">
-                    <img src="nos-e-drinks_html/mojito.jpg" alt="">
+                    <img src="nos-e-drinks_html\caipirinha levissima (1).jpg" alt="">
                     <h2>Mojito</h2>
                 </div>
 

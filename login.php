@@ -22,7 +22,7 @@ if (isset($_POST['entrar'])) {
 		header("locations:login.php?campos_obrigatorios");
 		die();
 
-        
+
 	}
 
 	//Capturar email e senha 
@@ -242,7 +242,7 @@ if (isset($_POST['entrar'])) {
 
 
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 
