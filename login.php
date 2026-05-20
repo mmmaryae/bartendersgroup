@@ -13,6 +13,7 @@ if (isset($_GET['sair'])) {
 
     logout();
 }
+//adicioando um comentarios so p testar
 
 /* if principal TRATA da entrada/login/senha */
 if (isset($_POST['entrar'])) {
@@ -20,6 +21,8 @@ if (isset($_POST['entrar'])) {
 	if (empty($_POST['email']) || empty($_POST['senha'])) {
 		header("locations:login.php?campos_obrigatorios");
 		die();
+
+        
 	}
 
 	//Capturar email e senha 
