@@ -1,170 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio de Drinks</title>
+    <title>Drinks</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/stylespersona.css">
 </head>
+
 <body>
 
-    <h1 class="titulo">Principais Coquetéis</h1>
+<section class="drink-section">
 
-    <section class="drinks-foto">
+    <h2 class="titulo">Cardápio de Drinks</h2>
 
-        <!-- DRINK 1 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
+    <div class="grid-drinks">
 
-                <div class="front">
-                    <img src="nos-e-drinks_html/caipirinha1.jpg" alt="">
-                    <h2>Caipiroska</h2>
+
+        <!-- 7 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                   <img src="nos-e-drinks_html/14.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Caipiroska</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Vodka</li>
-                        <li>Limão</li>
-                        <li>Açúcar</li>
-                        <li>Gelo</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 7</h3>
+                    <p>Ingredientes do drink 7</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- DRINK 2 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-
-                <div class="front">
-                    <img src="nos-e-drinks_html/caipirinha2.jpg" alt="">
-                    <h2>Margarita</h2>
+        <!-- 8 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                     <img src="nos-e-drinks_html/13.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Margarita</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Tequila</li>
-                        <li>Cointreau</li>
-                        <li>Limão</li>
-                        <li>Gelo</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 8</h3>
+                    <p>Ingredientes do drink 8</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- DRINK 3 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-
-                <div class="front">
-                    <img src="nos-e-drinks_html\caipirinha levissima (1).jpg" alt="">
-                    <h2>Mojito</h2>
+        <!-- 9 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="nos-e-drinks_html/12.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Mojito</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Rum</li>
-                        <li>Hortelã</li>
-                        <li>Limão</li>
-                        <li>Água com gás</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 9</h3>
+                    <p>Ingredientes do drink 9</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- DRINK 4 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-
-                <div class="front">
-                    <img src="nos-e-drinks_html/cosmopolitan.jpg" alt="">
-                    <h2>Cosmopolitan</h2>
+        <!-- 10 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="nos-e-drinks_html/11.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Cosmopolitan</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Vodka</li>
-                        <li>Cranberry</li>
-                        <li>Cointreau</li>
-                        <li>Limão</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 10</h3>
+                    <p>Ingredientes do drink 10</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- DRINK 5 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-
-                <div class="front">
-                    <img src="nos-e-drinks_html/pina-colada.jpg" alt="">
-                    <h2>Piña Colada</h2>
+        <!-- 11 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                   <img src="nos-e-drinks_html/10.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Piña Colada</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Rum</li>
-                        <li>Leite de coco</li>
-                        <li>Abacaxi</li>
-                        <li>Gelo</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 11</h3>
+                    <p>Ingredientes do drink 11</p>
                 </div>
-
             </div>
         </div>
 
-        <!-- DRINK 6 -->
-        <div class="drink-item">
-            <div class="drink-card" onclick="flipCard(this)">
-
-                <div class="front">
-                    <img src="nos-e-drinks_html/negroni.jpg" alt="">
-                    <h2>Negroni</h2>
+        <!-- 12 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                     <img src="nos-e-drinks_html/9.jpg" alt="Drink">
                 </div>
-
-                <div class="drink-back">
-                    <h2>Negroni</h2>
-
-                    <p>Ingredientes:</p>
-
-                    <ul>
-                        <li>Gin</li>
-                        <li>Campari</li>
-                        <li>Vermouth</li>
-                    </ul>
+                <div class="card-back">
+                    <h3>Drink 12</h3>
+                    <p>Ingredientes do drink 12</p>
                 </div>
-
             </div>
         </div>
 
-    </section>
+        <!-- 13 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                   <img src="nos-e-drinks_html/8.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 13</h3>
+                    <p>Ingredientes do drink 13</p>
+                </div>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- 14 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                     <img src="nos-e-drinks_html/7.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 14</h3>
+                    <p>Ingredientes do drink 14</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="nos-e-drinks_html/6.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 15</h3>
+                    <p>Ingredientes do drink 15</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                     <img src="nos-e-drinks_html/5.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 16</h3>
+                    <p>Ingredientes do drink 16</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                   <img src="nos-e-drinks_html/4.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 17</h3>
+                    <p>Ingredientes do drink 17</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                   <img src="nos-e-drinks_html/3.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 18</h3>
+                    <p>Ingredientes do drink 18</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                     <img src="nos-e-drinks_html/2.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 19</h3>
+                    <p>Ingredientes do drink 19</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="nos-e-drinks_html/1.jpg" alt="Drink">
+                </div>
+                <div class="card-back">
+                    <h3>Drink 20</h3>
+                    <p>Ingredientes do drink 20</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
