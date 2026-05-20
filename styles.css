@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset e Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cores */
+:root {
+    --cor-titulo: #4d4d4d;
+    --cor-texto: #f5f3f3;
+    --cor-escura: #821818;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
+    --cor-verclaro: #f00;
+    --cor-preto: black;
+}
+
+/* Estilo do corpo */
+body {
+    background-color: var(--cor-preto);
+
+}
+
+
+
+/* Slides do carrossel principal */
+.slide-principal img {
+    width: 100%;
+    /* Expande para a largura total */
+    height: auto;
+    /* Ajusta a altura proporcionalmente */
+    max-height: 100%;
+    /* Limita a altura da imagem para o tamanho do carrossel */
+    object-fit: cover;
+    /* Mantém o preenchimento sem distorção */
+    display: block;
+    margin: 0 auto;
+}
+
+.carrossel-principal {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    /* Define a altura do carrossel */
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+
+.slide-principal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* Todos os slides começam invisíveis */
+    transition: opacity 1s ease-in-out;
+
+}
+
+
+
+/* Imagens do carrossel principal */
+.slide-principal img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Animação para alternar slides */
+@keyframes fadeSlidePrincipal {
+
+    0%,
+    25% {
+        opacity: 1;
+    }
+
+    /* Mostra o slide */
+    33.33%,
+    100% {
+        opacity: 0;
+    }
+
+    /* Esconde o slide */
+}
+
+/* Configura cada slide e seu respectivo tempo de visibilidade */
+.slide-principal:nth-child(1) {
+    animation: fadeSlidePrincipal 9s infinite;
+}
+
+.slide-principal:nth-child(2) {
+    animation: fadeSlidePrincipal 9s infinite;
+    animation-delay: 3s;
+    /* Início depois de 3s */
+}
+
+.slide-principal:nth-child(3) {
+    animation: fadeSlidePrincipal 9s infinite;
+    animation-delay: 6s;
+    /* Início depois de 6s */
+}
+
+
+.carousel-title-principal {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3em;
+    opacity: 0;
+    /* Começa invisível */
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+/* Animação para o texto */
+@keyframes fadeTextPrincipal {
+
+    0%,
+    10% {
+        opacity: 0;
+        /* Começa invisível */
+    }
+
+    15%,
+    25% {
+        opacity: 1;
+        /* Aparece */
+    }
+
+    30%,
+    40% {
+        opacity: 0;
+        /* Desaparece */
+    }
+}
+
+/* Aplica a animação de fadeText nos títulos dos slides */
+
+.slide-principal:nth-child(1) .carousel-title-principal {
+    animation: fadeTextPrincipal 9s infinite;
+}
+
+.slide-principal:nth-child(2) .carousel-title-principal {
+    animation: fadeTextPrincipal 9s infinite;
+    animation-delay: 3s;
+}
+
+.slide-principal:nth-child(3) .carousel-title-principal {
+    animation: fadeTextPrincipal 9s infinite;
+    animation-delay: 6s;
+}
+
+.font-estilizada-1,
+.font-estilizada-2,
+.font-estilizada-3 {
+    font-family: 'Pacifico';
+    color: var(--cor-verclaro);
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos do Navbar */
+.navbar {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+margin-left: 10px;
+    max-width: 1200px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-item {
+    position: relative;
+   
+
+}
+
+.nav-link {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    color: var(--cor-texto);
+
+    font-family: Urbanist;
+}
+
+.nav-link:hover {
+    background-color: rgba(87, 87, 87, 0.121);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+/* Configuração do dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333333f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-item {
+    color: var(--cor-clara);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-item:hover {
+    background-color: #57575725;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+/* Seção de Serviços */
+
+.servicosparte h2 {
+    font-family: "Urbanist";
+    color: var(--cor-clara);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.servicosparte {
+    text-align: center;
+    background-color: black;
+}
+
+.servicosparte figure {
+    display: inline-block;
+    margin: 20px;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.servicosparte img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+}
+
+.servicosparte img:hover,
+.servicosparte img:active {
+    transform: scale(0.95);
+}
+
+
+figcaption {
+    font-family: "Urbanist";
+    color: var(--cor-clara);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+/* Seção História */
+
+
+
+#nossahisparte {
+    padding: 20px;
+}
+
+#nossahisparte h3 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.ladoshist {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.carrossel3 {
+    flex: 1;
+    width: 300px; /* Define uma largura menor */
+    overflow: hidden;
+    margin-top: 60px;
+    margin-left: 30px;
+    position: relative; /* Necessário para usar pseudo-elementos */
+    border-radius: 8px; /* Opcional: bordas arredondadas no carrossel */
+   
+}
+
+.carrossel-imagens3 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ajusta a largura para ocupar o contêiner do carrossel */
+}
+
+.carrossel-imagem3 {
+    width: 100%; /* As imagens ocupam 100% da largura do carrossel */
+    flex-shrink: 0;
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+}
+
+.ladoshist p {
+    font-size: 13px; /* Mantém o tamanho da letra */
+    line-height: 1.6;
+    text-align: justify;
+    width: 100%; /* Garante que o texto ocupe 100% da largura disponível */
+    max-width: 400px; /* Define um limite máximo para a largura */
+    margin-top: 30px;
+    margin-right: 0px;
+    color: var(--cor-clara);
+    font-family: "Urbanist";
+}
+
+
+
+.ladoshist b{
+color: var(--cor-escura);
+
+}
+
+.hhisto{
+    color: var(--cor-escura);
+    font-family: "Urbanist";
+}
+
+    #nossahisparte h3{
+        color: var(--cor-clara);
+        font-family: "Urbanist";
+    }
+
+
+
+/* Esconde o elemento inicialmente com efeito suave */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Desloca para baixo */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Exibe o elemento quando visível */
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta à posição original */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Duvidas */
+
+main.duvidas {
+    padding: 20px;
+
+
+    margin: 0 20px;
+
+}
+
+main.duvidas h3 {
+    font-size: 24px;
+    font-family: 'Urbanist', sans-serif;
+    color: var(--cor-clara);
+    margin-bottom: 20px;
+
+
+}
+
+main.duvidas summary {
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+
+}
+
+
+main.duvidas details {
+    margin-bottom: 15px;
+
+}
+
+main.duvidas summary {
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    color: var(--cor-clara);
+
+}
+
+
+main.duvidas h3 .tamanho-especifico1 {
+    color: var(--cor-escura);
+  
+}
+
+main.duvidas details {
+    margin-bottom: 15px;
+  
+}
+
+main.duvidas summary {
+    font-weight: bold;
+
+    cursor: pointer;
+    
+    font-size: 15px;
+    padding: 10px;
+    font-family: 'Urbanist', sans-serif;
+    color: var(--cor-clara);
+
+}
+
+
+main.duvidas p {
+    margin-top: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+
+    color: var(--cor-escura);
+
+}
+
+
+/* Seção Depoimentos */
+.containerDepoimentosparte {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 90px;
+
+}
+
+.containerDepoimentosparte img {
+    width: 60px;
+    height: 60px;
+
+}
+
+.containerDepoimentosparte h4 {
+    margin-top: 20px;
+    color: var(--cor-escura);
+    font-size: 21px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.carousel-inner {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 12px;
+}
+
+
+.carousel-item p {
+    color: var(--cor-texto);
+    font-family: 'Urbanist', sans-serif;
+}
+
+
+
+
+
+.mt-3 {
+    color: var(--cor-clara);
+}
+
+
+/* Seção Curso / Vídeo */
+.cursoparte {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+
+    margin: 20px;
+
+
+}
+
+.cursoparte h5 {
+    font-size: 30px;
+    color: var(--cor-clara);
+    font-family: "Urbanist";
+    margin: 0;
+
+}
+
+.cursoparte p {
+    font-size: 14px;
+    text-align: left;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 10px 0;
+
+    color: var(--cor-clara);
+}
+
+.tamanho-especifico2 {
+    color: var(--cor-escura);
+}
+
+
+
+.cursoparte b {
+    color: var(--cor-escura);
+    font-family: 'Urbanist', sans-serif;
+}
+
+video {
+    width: 100%;
+    max-width: 350px;
+
+
+}
+
+
+
+/* Seção Contato */
+#contato-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+
+}
+
+.contatoparte,
+.contato2 {
+    width: 50%;
+    margin: 0 auto;
+
+    padding: 20px;
+    color: var(--cor-clara);
+}
+
+.tamanho-especifico {
+    color: var(--cor-clara);
+    font-size: 30px;
+}
+
+.contatoparte b {
+    font-size: 30px;
+    color: var(--cor-escura);
+    font-family: "Urbanist";
+}
+
+.contato2 a {
+    font-size: 10px;
+
+    color: var(--cor-escura);
+}
+
+
+.contato2 p {
+    font-size: 10px;
+
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+}
+
+footer img {
+    width: 39%;
+    padding: 5px;
+}
+
+footer h6 {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+/* Personality parte */
+.personality-body {
+    background-color: #000;
+    color: var(--cor-verclaro);
+    margin-bottom: 10px;
+}
+
+.personality-conteudo {
+    background-color: #333;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Urbanist', sans-serif;
+
+}
+
+.personality-conteudo h2 {
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+    color: var(--cor-verclaro);
+}
+
+.personality-conteudo p b {
+    color: var(--cor-verclaro);
+    line-height: 1.6;
+}
+
+.personality-conteudo p {
+    color: var(--cor-clara);
+}
+
+.personality-conteudo input,
+.personality-conteudo select,
+.personality-conteudo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: var(--cor-verclaro);
+
+}
+
+input[type="radio"].meu-radio {
+    width: 20px;
+    /* Ajusta a largura do botão de rádio */
+    height: 20px;
+    /* Ajusta a altura */
+    accent-color: red;
+    /* Muda a cor de seleção */
+    cursor: pointer;
+    /* Aponta o cursor ao passar o mouse */
+}
+
+.opcao-convidados {
+    display: inline-block;
+    /* Coloca o label em bloco */
+    margin-bottom: 8px;
+    /* Espaço entre os labels */
+}
+
+
+
+
+
+
+
+
+
+.personality-conteudo input {
+    border: 1px solid #555;
+    background-color: #222;
+    color: var(--cor-verclaro);
+}
+
+.personality-conteudo button {
+    background-color: var(--cor-verclaro);
+    color: var(--cor-texto);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.personality-conteudo button:hover {
+    background-color: var(--cor-escura);
+}
+
+
+/* sugestao*/
+
+
+/* CSS para o cardápio */
+
+
+.menuh2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.drinks-foto {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.drink-item {
+    flex: 1 1 calc(33.33% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o card de drinks */
+.drink-card {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo da frente da carta (a foto do drink) */
+.cocktail-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* A parte de trás da carta (ingredientes) */
+.drink-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.5s, transform 0.5s;
+    padding: 10px;
+}
+
+/* Estilo quando a carta é virada */
+.drink-card.flipped .cocktail-img {
+    transform: rotateY(180deg);
+}
+
+
+.drink-card.flipped {
+    transform: rotateY(180deg);
+}
+
+
+.drink-card.flipped .drink-back {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .drink-item {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .drink-item {
+        flex: 1 1 calc(100% - 10px);
+    }
+}
+
+/* Longin */
+
+
+
+
+
+
+/* @Midia */
+
+/* Estilos para telas menores */
+@media (max-width: 450px) {
+ 
+
+    .carousel-title-principal {
+        font-size: 36px;
+        top: 150px;
+    }
+
+    .contato2 p {
+        font-size: 15px;
+    }
+
+    .contato2 a {
+        font-size: 12px;
+    }
+
+    .ladoshist {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .carrossel3 {
+        max-width: 100%;
+    }
+
+    .ladoshist p {
+        max-width: 100%;
+    }
+  
+
+}
+
+
+/* Midia para computador */
+
+@media (min-width: 1024px) {
+
+
+    .carousel-title-principal {
+        font-size: 50px;
+        top: 40%;
+    }
+
+
+    .carrossel-principal {
+        height: 70vh;
+        z-index: 0;
+        /* Garante que o z-index fique no mesmo nível */
+    }
+
+
+
+    .servicosparte h2 {
+        font-size: 36px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .servicosparte figure {
+        margin: 60px;/
+    }
+
+    .servicosparte img {
+        max-width: 90px;
+    }
+
+    figcaption {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+
+    .cursoparte {
+        
+        text-align: center;
+    }
+
+    .texto {
+        align-self: flex-start;
+        margin-bottom: 10px;
+        margin-left: 30px;
+
+    }
+
+    .cursoparte p {
+        text-align: left;
+        font-family: "Urbanist";
+        margin-left: 20px;
+        font-size: 17px;
+    }
+
+    video {
+        max-width: 600px;
+    }
+
+    .carousel-item p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    footer h6 {
+
+        color: var(--cor-clara);
+        font-size: 15px;
+    }
+
+    footer img {
+        width: 20%;
+        height: auto;
+    }
+
+    .nossahisparte h3,
+    .hhisto {
+        font-size: 30px;
+    }
+
+
+    /* contato */
+
+
+
+
+    .contato2 a {
+        font-size: 15px;
+
+
+    }
+
+
+    .contato2 p {
+        font-size: 17px;
+
+    }
+
+    #contato-container .contatoparte p {
+        font-size: 20px;
+        /* Ajuste o valor conforme necessário */
+    }
+
+    #contato-container .contatoparte .tamanho-especifico {
+        font-size: 25px;
+        /* Ajuste para o tamanho específico desejado */
+    }
+
+    #contato-container .contatoparte b {
+        font-size: 30px;
+        /* Ajuste o tamanho do <b> se necessário */
+    }
+
+    .menutext {
+        width: 650px;
+        /* Define a largura máxima para o texto */
+        margin: 0 auto;
+        /* Centraliza o texto */
+        text-align: center;
+        /* Alinha o texto ao centro */
+
+    }
+
+    .carrossel3 {
+        flex: 1;
+        max-width: 30%; /* Carrossel menor */
+        overflow: hidden;
+        margin-top: 30px;
+        margin-left: 0px;
+        position: relative; /* Necessário para usar pseudo-elementos */
+       
+    }
+    
+    .carrossel-imagens3 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+     
+    }
+    
+    .carrossel-imagem3 {
+        width: 100%;
+        flex-shrink: 0;
+        border-radius: 8px;
+    }
+
+
+    .navbar{
+        margin-left: 150px;
+    width: 100%;
+    font-size: 25px;
+    }
+
+
+
+    .ladoshist p {
+        font-size: 17px; /* Mantém o tamanho da letra */
+        line-height: 1.6;
+        text-align: justify;
+       /* Garante que o texto ocupe 100% da largura disponível */
+        max-width: 60%;
+        margin-top: 40px;
+        margin-right: 90px;
+      
+        
+    }
+
+
+    .carousel-inner {
+      
+        font-size: 17px;
+    }
+    
+
+
+
+
+    main.duvidas summary{
+        font-size: 20px;
+    }
+
+
+    main.duvidas p{
+        font-size: 19px;
+        width: 50%;
+    }
+
+    main.duvidas h3 {
+        margin-top: 40px;
+        font-size: 30px;
+      
+    
+    
+    }
+    
+
+    .containerDepoimentosparte h4 {
+    font-size: 25px;
+       
+    }
+
+
+}
