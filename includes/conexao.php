@@ -1,8 +1,8 @@
 <?php
-$host = 'sql212.infinityfree.com';
-$usuario = 'if0_41975847';
+$host = 'sql206.infinityfree.com';
+$usuario = 'if0_41978313';
 $senha = 'Mari280404';
-$banco = 'if0_41975847_bartendersgroup';
+$banco = 'if0_41978313_bartendersgroup';
 
 $conexao = new mysqli($host, $usuario, $senha, $banco);
 
