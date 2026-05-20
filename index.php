@@ -256,7 +256,7 @@ if (isset($_GET['sair'])){
 
 
         <video controls>
-            <source src="imagens_html/video.bar.mp4" type="video/mp4">
+            <source src="nos-e-drinks_html/videoteste.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
     </div>
